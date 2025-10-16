@@ -20,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function (AppProvider $appProvider) {
     return view('chat-app-example', [
-        "port" => env("PUSHER_PORT"),
-        "host" => env("PUSHER_HOST"),
+        "port" => 6001,
+        "host" => "127.0.0.1",
         "authEndpoint" => "api/sockets/connect",
         "logChannel" => DashboardLogger::LOG_CHANNEL_PREFIX,
         "apps" => $appProvider->all(),
